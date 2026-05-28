@@ -1,17 +1,17 @@
-"""Headless CLI to invoke the deployed Product Designer agent.
+"""Headless CLI to invoke the deployed OTT Data Analyst agent.
 
 Usage:
-    python scripts/invoke_agent.py "Design a reusable bamboo water bottle for students"
+    python scripts/invoke_agent.py "Top 10 search keywords in the 14-day window"
 
-Reads the agent id/alias from the ProductDesignerAgentStack CloudFormation outputs.
+Reads the agent id/alias from the OttDataAnalystAgentStack CloudFormation outputs.
 """
 import sys
 import uuid
 
 import boto3
 
-REGION = "us-west-2"
-STACK = "ProductDesignerAgentStack"
+REGION = "ap-southeast-1"
+STACK = "OttDataAnalystAgentStack"
 
 
 def stack_outputs():
@@ -22,7 +22,7 @@ def stack_outputs():
 
 def main():
     prompt = " ".join(sys.argv[1:]).strip() or (
-        "Design a reusable bamboo water bottle for Vietnamese university students."
+        "Top 10 search keywords overall in the 14-day window, including any genre. Show counts."
     )
     out = stack_outputs()
     rt = boto3.client("bedrock-agent-runtime", region_name=REGION)
