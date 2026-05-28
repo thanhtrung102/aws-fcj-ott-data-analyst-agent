@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OTT Data Analyst</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📊 OTT Search Analyst</h1>
+    <p>Ask in plain English or Vietnamese about FPT Play search events between <strong>2022-06-01 and 2022-06-14</strong>. The agent writes SQL, runs it on Amazon Athena, and explains the answer.</p>
+  </header>
+  <main>
+    <div id="log" class="log">
+      <div class="msg agent">
+        <strong>Try one of these:</strong>
+        <ul>
+          <li>Top 10 search keywords overall in the 14-day window</li>
+          <li>How does the genre mix differ on mobile vs TV?</li>
+          <li>Which day had the most abandoned searches and why?</li>
+          <li>List the top UNKNOWN keywords by frequency</li>
+          <li>Which hour of the day has the highest search volume?</li>
+        </ul>
+      </div>
+    </div>
+    <form id="form">
+      <textarea id="prompt" rows="2"
+        placeholder="e.g. Top 10 search keywords in the PHIM_HAN genre during week 1"></textarea>
+      <button id="send" type="submit">Ask</button>
+    </form>
+  </main>
+  <footer>Serverless on AWS · Bedrock Agents + Glue + Athena · Source: <a href="https://github.com/aws-samples/sample-Agentic-Ai-Data-Operations">aws-samples/sample-Agentic-Ai-Data-Operations</a></footer>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

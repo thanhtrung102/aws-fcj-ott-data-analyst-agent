@@ -1,0 +1,70 @@
+baseURL = "https://example.github.io/aws-fcj-ott-data-analyst-agent/"
+relativeURLs = true
+canonifyURLs = true
+
+theme = "hugo-theme-relearn"
+defaultContentLanguage = "en"
+metaDataFormat = "yaml"
+
+[params]
+  themeVariant = "workshop"
+  editURL = ""
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+  disableLandingPageButton = true
+  titleSeparator = "::"
+  [params.author]
+    name = "thanhtrungnsl2003@gmail.com"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[Languages]
+[Languages.en]
+title = "AI Data Analyst Agent for OTT Search Events on Amazon Bedrock"
+weight = 1
+label = "English"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-github'></i> Workshop repo"
+identifier = "repo"
+url = "https://github.com/thanhtrung102/aws-fcj-ott-data-analyst-agent"
+weight = 10
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-database'></i> Source repo (aws-samples)"
+identifier = "source"
+url = "https://github.com/aws-samples/sample-Agentic-Ai-Data-Operations"
+weight = 15
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-robot'></i> Amazon Bedrock"
+identifier = "bedrock"
+url = "https://aws.amazon.com/bedrock/"
+weight = 20
+
+[Languages.vi]
+title = "Tác nhân Phân tích Dữ liệu AI cho Sự kiện Tìm kiếm OTT trên Amazon Bedrock"
+weight = 2
+label = "Tiếng Việt"
+
+[[Languages.vi.menu.shortcuts]]
+name = "<i class='fab fa-github'></i> Workshop repo"
+identifier = "repo"
+url = "https://github.com/thanhtrung102/aws-fcj-ott-data-analyst-agent"
+weight = 10
+
+[[Languages.vi.menu.shortcuts]]
+name = "<i class='fas fa-database'></i> Source repo (aws-samples)"
+identifier = "source"
+url = "https://github.com/aws-samples/sample-Agentic-Ai-Data-Operations"
+weight = 15
+
+[[Languages.vi.menu.shortcuts]]
+name = "<i class='fas fa-robot'></i> Amazon Bedrock"
+identifier = "bedrock"
+url = "https://aws.amazon.com/bedrock/"
+weight = 20

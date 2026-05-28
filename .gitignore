@@ -1,0 +1,19 @@
+# Hugo
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# CDK
+infra/.venv/
+infra/cdk.out/
+infra/__pycache__/
+infra/**/__pycache__/
+*.pyc
+
+# Local env
+.env
+*.local
+
+# OS
+.DS_Store
+Thumbs.db
